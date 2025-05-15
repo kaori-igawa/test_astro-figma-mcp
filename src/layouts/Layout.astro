@@ -1,14 +1,36 @@
 ---
 import { Font } from 'astro:assets'
+
+import { metaData } from '@/data/metaData'
 ---
 <!doctype html>
-<html lang="en">
+<html lang="ja">
 	<head>
+		<meta http-equiv="content-language" content="ja">
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>{metaData.title}</title>
+		<!-- default -->
+		<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+		<meta name="description" content={metaData.description}>
+		<meta name="keywords" content={metaData.keywords}>
+		<!-- setting -->
+		<meta name="format-detection" content="telephone=no,email=no,address=no">
+		<!-- sns -->
+		<meta property="og:type" content="website">
+		<meta property="og:title" content={metaData.title} />
+		<meta property="og:description" content={metaData.description} />
+		<meta property="og:image" content={`${metaData.url}${metaData.ogpImage}`} />
+		<meta name="twitter:card" content="summary_large_image"/>
+		<meta name="twitter:title" content={metaData.title} />
+		<meta name="twitter:description" content={metaData.description} />
+		<meta name="twitter:image" content={`${metaData.url}${metaData.ogpImage}`} />
+		<!-- icon -->
+		<link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="16x16"/>
+		<link rel="icon" href="/icon.png" type="image/png" sizes="192x192"/>
+		<link rel="apple-touch-icon" href="/apple-icon.png" type="image/png" sizes="180x180"/>
 	</head>
 	<body>
 		<slot />
@@ -25,3 +47,4 @@ import { Font } from 'astro:assets'
 		font-family: var(--font-notoSansJP);
 	}
 </style>
+
