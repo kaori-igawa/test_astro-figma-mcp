@@ -22,11 +22,11 @@ import { metaData } from '@/data/metaData'
 		<meta property="og:type" content="website">
 		<meta property="og:title" content={metaData.title} />
 		<meta property="og:description" content={metaData.description} />
-		<meta property="og:image" content={`${metaData.url}${metaData.ogpImage}`} />
+		<meta property="og:image" content={`${import.meta.env.SITE}${import.meta.env.BASE_URL}${metaData.ogpImage}`} />
 		<meta name="twitter:card" content="summary_large_image"/>
 		<meta name="twitter:title" content={metaData.title} />
 		<meta name="twitter:description" content={metaData.description} />
-		<meta name="twitter:image" content={`${metaData.url}${metaData.ogpImage}`} />
+		<meta name="twitter:image" content={`${import.meta.env.SITE}${import.meta.env.BASE_URL}${metaData.ogpImage}`} />
 		<!-- icon -->
 		<link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="16x16"/>
 		<link rel="icon" href="/icon.png" type="image/png" sizes="192x192"/>

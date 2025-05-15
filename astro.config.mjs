@@ -7,6 +7,9 @@ import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://www.my-site.dev',
+  base: '/dist/',
+  compressHTML: false,
   experimental: {
     fonts: [{
         provider: fontProviders.google(),
