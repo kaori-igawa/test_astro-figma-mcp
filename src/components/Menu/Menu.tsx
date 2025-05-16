@@ -24,9 +24,9 @@ export const Menu: React.FC<PropsType> = ({ isOpenMenu }) => {
     [@starting-style]:h-0 
     ${isOpenMenu ? 'opacity-100 h-fit' : ''}
     `}>
-      <li>aaa</li>
-      <li>bbb</li>
-      <li>ccc</li>
+      <li><a href='#test01'>aaa</a></li>
+      <li><a href='#test02'>bbb</a></li>
+      <li><a href='#test03'>ccc</a></li>
     </menu>
   );
 }; 
