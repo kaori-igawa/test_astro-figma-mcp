@@ -22,7 +22,7 @@ export const Menu: React.FC<PropsType> = ({ isOpenMenu }) => {
     h-0
     [@starting-style]:opacity-0
     [@starting-style]:h-0 
-    ${isOpenMenu && 'opacity-100 h-fit'}
+    ${isOpenMenu ? 'opacity-100 h-fit' : ''}
     `}>
       <li>aaa</li>
       <li>bbb</li>
